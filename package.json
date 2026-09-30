@@ -1,0 +1,24 @@
+{
+  "name": "docker-backup-relay",
+  "version": "1.0.0",
+  "description": "Zero-config Automated Database Backup & Encrypted Telegram/S3 Relay in Docker",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node --test test/test_backup.js"
+  },
+  "keywords": [
+    "docker",
+    "backup",
+    "postgres",
+    "sqlite",
+    "telegram-bot",
+    "s3",
+    "database-backup",
+    "self-hosted",
+    "cron"
+  ],
+  "author": "Shokun123",
+  "license": "MIT"
+}

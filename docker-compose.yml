@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  backup-relay:
+    build: .
+    container_name: docker-backup-relay
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      - TARGET_NAME=Production Primary Database
+      - BACKUP_DIR=/data/backups
+      - ENCRYPTION_PASSWORD=your_secure_passphrase_here
+      - LICENSE_KEY=
+      # Telegram Notifications (Optional)
+      - TELEGRAM_BOT_TOKEN=
+      - TELEGRAM_CHAT_ID=
+    volumes:
+      - ./backups:/data/backups

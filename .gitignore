@@ -1,0 +1,6 @@
+node_modules/
+backups/
+*.gz
+*.enc
+.env
+.DS_Store
